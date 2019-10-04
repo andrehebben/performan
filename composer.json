@@ -1,0 +1,66 @@
+{
+    "name": "andrehebben/performan",
+    "description": "Andre Hebben's Homepage and Goal tracker",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "resume/portfolio at the front end ,   a goaltracker / information system on the backend",
+        "personal",
+        "zf3"
+    ],
+    "homepage": "https://andrehebben.nl/",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^5.6 || ^7.0",
+	"ext-redis": "*",
+    	"ext-pdo": "*",
+    	"ext-gettext": "*",
+    	"ext-json":  "*",
+        "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
+        "zendframework/zend-mvc": "^3.1.1",
+   	"zendframework/zend-mvc-form": "^1.0",
+    	"zendframework/zend-cache": "^2.7.1",
+    	"zendframework/zend-json": "^3.0",
+    	"zendframework/zend-mail": "^2.10.0",
+    	"zendframework/zend-mvc-console": "^1.1.10",
+    	"zendframework/zend-mvc-i18n": "^1.0",
+    	"zendframework/zend-mvc-plugins": "^1.0.1",
+    	"zendframework/zend-navigation": "^2.8.1",
+    	"zendframework/zend-session": "^2.7.1",
+    	"zendframework/zend-serializer": "^2.8",
+    	"zendframework/zendservice-twitter": "^3.0",
+    	"doctrine/doctrine-orm-module": "^2.1",
+	"kokspflanze/zfc-twig": "dev-master",
+        "rwoverdijk/assetmanager": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "module/Application/test/"
+        }
+    },
+    "extra": [],
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "development-disable": "zf-development-mode disable",
+        "development-enable": "zf-development-mode enable",
+        "development-status": "zf-development-mode status",
+        "post-create-project-cmd": [
+            "@development-enable"
+        ],
+        "serve": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "test": "phpunit"
+    },
+    "require-dev": {
+        "zendframework/zend-test": "^3.3",
+        "phpstan/phpstan": "^0.11.16",
+        "phpmd/phpmd": "^2.7",
+        "phploc/phploc": "^5.0"
+    }
+}
