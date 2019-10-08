@@ -32,7 +32,8 @@
     	"zendframework/zendservice-twitter": "^3.0",
     	"doctrine/doctrine-orm-module": "^2.1",
 	"kokspflanze/zfc-twig": "dev-master",
-        "rwoverdijk/assetmanager": "^1.8"
+        "rwoverdijk/assetmanager": "^1.8",
+        "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -61,7 +62,6 @@
         "zendframework/zend-test": "^3.3",
         "phpstan/phpstan": "^0.11.16",
         "phpmd/phpmd": "^2.7",
-        "phploc/phploc": "^5.0",
-	"squizlabs/php_codesniffer": "3.*"
+        "phploc/phploc": "^5.0"
     }
 }
