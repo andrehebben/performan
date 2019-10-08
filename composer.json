@@ -61,6 +61,7 @@
         "zendframework/zend-test": "^3.3",
         "phpstan/phpstan": "^0.11.16",
         "phpmd/phpmd": "^2.7",
-        "phploc/phploc": "^5.0"
+        "phploc/phploc": "^5.0",
+	"squizlabs/php_codesniffer": "3.*"
     }
 }
