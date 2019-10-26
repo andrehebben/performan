@@ -1,15 +1,19 @@
-FROM phpdockerio/php73-fpm:latest
-WORKDIR "/application"
+FROM php:7.3-apache
 
-# Fix debconf warnings upon build
-ARG DEBIAN_FRONTEND=noninteractive
-
-# Install selected extensions and other stuff
 RUN apt-get update \
-    && apt-get -y --no-install-recommends install  php7.3-mysql php-redis php-xdebug php7.3-bcmath \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+ && apt-get install -y git zlib1g-dev \
+ && docker-php-ext-install zip \
+ && a2enmod rewrite \
+ && pecl install xdebug \
+ && sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/000-default.conf \
+ && mv /var/www/html /var/www/public \
+ && curl -sS https://getcomposer.org/installer \
+  | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install git
-RUN apt-get update \
-    && apt-get -y install git \
-    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+RUN yes | pecl install xdebug \
+    && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.remote_autostart=off" >> /usr/local/etc/php/conf.d/xdebug.ini
+    && echo "xdebug.remote_host=host.docker.internal" >> /usr/local/etc/php/conf.d/xdebug.ini
+
+WORKDIR /var/www
