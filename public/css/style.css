@@ -9468,6 +9468,15 @@ body.md-skin {
   position: fixed;
   display: none;
 }
+.fa-star {
+  color: #DFE0E0;
+}
+.checked {
+  color: #2B4970;
+}
+h2.navy {
+  color: #2B4970;
+}
 @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
