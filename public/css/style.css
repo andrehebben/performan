@@ -9477,6 +9477,14 @@ body.md-skin {
 h2.navy {
   color: #2B4970;
 }
+h2.services-header {
+  height: 2.1em;
+}
+p.services-p{
+  height: 8em;
+}
+
+
 @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
