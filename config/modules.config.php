@@ -29,5 +29,6 @@ return [
     'DoctrineModule',
     'DoctrineORMModule',
     'ZfcTwig',
+    'AssetManager',
     'Application',
 ];

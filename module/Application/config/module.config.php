@@ -48,13 +48,40 @@ return [
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => [
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'layout/layout'           => __DIR__ . '/../view/layout/layout.twig',
+            'application/index/index' => __DIR__ . '/../view/application/index/index.twig',
+            'error/404'               => __DIR__ . '/../view/error/404.twig',
+            'error/index'             => __DIR__ . '/../view/error/index.twig',
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
     ],
+    'asset_manager' => [
+        'resolver_configs' => [
+            'paths' => [
+                'resolver_configs' => [
+                    'collections' => [
+                        'css/all.css' => [
+                            'css/bootstrap.min.css',
+                            'css/animate.css',
+                            'font-awesome/css/all.css',
+                            'font-awesome/css/brands.css',
+                            'css/style.css',
+                        ],
+                        'js/all.js' => [
+                            'js/jquery-2.1.1.js',
+                            'js/pace.min.js',
+                            'js/bootstrap.min.js',
+                            'js/classie.js',
+                            'js/cbpAnimatedHeader.js',
+                            'js/wow.min.js'
+                        ],
+                    ],
+                ],
+                __DIR__ . '/../public',
+            ],
+        ],
+    ],
 ];
+var_dump( __DIR__ . '/../public'); die();
