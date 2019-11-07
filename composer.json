@@ -27,8 +27,8 @@
     	"zendframework/zend-serializer": "^2.8",
     	"zendframework/zendservice-twitter": "^3.0",
     	"doctrine/doctrine-orm-module": "^2.1",
-	"kokspflanze/zfc-twig": "dev-master",
-        "rwoverdijk/assetmanager": "^1.8",
+	"kokspflanze/zfc-twig": "dev-master", 
+        "rwoverdijk/assetmanager": "^1.7",
         "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
