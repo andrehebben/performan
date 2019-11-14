@@ -42,7 +42,7 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
     public function testIndexActionViewModelTemplateRenderedWithinLayout()
     {
         $this->dispatch('/', 'GET');
-        $this->assertQuery('.container .carousel');
+        $this->assertQuery('.container');
     }
 
     public function testInvalidRouteDoesNotCrash()
