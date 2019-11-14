@@ -7,11 +7,10 @@
 
 namespace Application;
 
-use Assetic\Filter\CssMinFilter;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
-use Assetic\Filter\MinifyCssCompressorFilter;
+
 return [
     'router' => [
         'routes' => [
@@ -58,17 +57,31 @@ return [
             __DIR__ . '/../view',
         ],
     ],
-    'asset_manager' => array(
-         'resolver_configs' => array(
-             'collections' => array(
-                 'css/all.css' => array(
+    'asset_manager' => [
+         'resolver_configs' => [
+             'collections' => [
+                 'css/all.css' => [
                          'css/test-asset-b.css',
                          'css/test-asset-a.css',
-                 ),
-             ),
-             'paths' => array(
+                 ],
+             ],
+             'paths' => [
                     'Application' => __DIR__ . '/../public',
-             ),
-         ),
-    ),
+             ],
+             'filters' => [
+                 'js' => [
+                     [
+                         // Note: Uglify and minify.
+                         'service' => 'JsService',
+                     ],
+                 ],
+                 'css' => [
+                     [
+                         // Note: Uglify and minify.
+                         'service' => 'CssService',
+                     ],
+                 ],
+             ],
+         ],
+    ],
 ];

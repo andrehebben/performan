@@ -3,12 +3,14 @@
   <component name="MessDetector">
     <phpmd_settings>
       <phpmd_by_interpreter interpreter_id="48b4ce0c-1c76-4b26-842f-71116bc33986" />
+      <MessDetectorConfiguration tool_path="$PROJECT_DIR$/vendor/bin/phpmd" />
     </phpmd_settings>
   </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
       <phpcs_by_interpreter interpreter_id="48b4ce0c-1c76-4b26-842f-71116bc33986" tool_path="/var/www/dev2/_website/vendor/bin" />
       <phpcs_by_interpreter interpreter_id="b5379fd7-38d4-487a-8fc2-f704c0d76e17" tool_path="/var/www/dev2/web/vendor/bin/phpcs" />
+      <PhpCSConfiguration beautifier_path="$PROJECT_DIR$/vendor/bin/phpcbf" tool_path="$PROJECT_DIR$/vendor/bin/phpcs" />
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">
