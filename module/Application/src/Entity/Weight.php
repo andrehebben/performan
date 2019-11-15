@@ -46,5 +46,4 @@ final class Weight
     {
         $this->dateCreated = $dateCreated;
     }
-
 }
