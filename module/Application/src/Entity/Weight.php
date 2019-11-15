@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="weight")
  */
-class Weight
+final class Weight
 {
     /**
      * @ORM\Id
@@ -16,6 +16,12 @@ class Weight
      * @ORM\Column(name="id")
      */
     protected $id;
+
+    /**
+     * @ORM\Column(name="date_created")
+     */
+    protected $dateCreated;
+
 
     // Returns ID of this post.
     public function getId()
@@ -28,4 +34,17 @@ class Weight
     {
         $this->id = $id;
     }
+
+    // Returns the date when this comment was created.
+    public function getDateCreated()
+    {
+        return $this->dateCreated;
+    }
+
+    // Sets the date when this comment was created.
+    public function setDateCreated($dateCreated)
+    {
+        $this->dateCreated = $dateCreated;
+    }
+
 }
