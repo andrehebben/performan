@@ -7,6 +7,7 @@
 
 namespace Application;
 
+use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -51,11 +52,25 @@ return [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.twig',
             'application/index/index' => __DIR__ . '/../view/application/index/index.twig',
             'error/404'               => __DIR__ . '/../view/error/404.twig',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'error/index'             => __DIR__ . '/../view/error/index.twig',
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+    ],
+    'doctrine' => [
+        'driver' => [
+            __NAMESPACE__ . '_driver' => [
+                'class' => AnnotationDriver::class,
+                'cache' => 'array',
+                'paths' => [__DIR__ . '/../src/Entity']
+            ],
+            'orm_default' => [
+                'drivers' => [
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
+                ]
+            ]
+        ]
     ],
     'asset_manager' => [
          'resolver_configs' => [
@@ -67,20 +82,6 @@ return [
              ],
              'paths' => [
                     'Application' => __DIR__ . '/../public',
-             ],
-             'filters' => [
-                 'js' => [
-                     [
-                         // Note: Uglify and minify.
-                         'service' => 'JsService',
-                     ],
-                 ],
-                 'css' => [
-                     [
-                         // Note: Uglify and minify.
-                         'service' => 'CssService',
-                     ],
-                 ],
              ],
          ],
     ],
