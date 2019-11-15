@@ -28,5 +28,4 @@ class Weight
     {
         $this->id = $id;
     }
-
 }

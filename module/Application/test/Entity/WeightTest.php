@@ -11,5 +11,4 @@ class WeightTest extends TestCase
         $weight = new Weight();
         $this->assertNull($weight->getId(), '"id" should be null by default');
     }
-
 }
