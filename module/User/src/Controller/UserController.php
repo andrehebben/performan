@@ -2,6 +2,7 @@
 namespace User\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\Mvc\MvcEvent;
 use Zend\View\Model\ViewModel;
 use DoctrineORMModule\Paginator\Adapter\DoctrinePaginator as DoctrineAdapter;
 use Doctrine\ORM\Tools\Pagination\Paginator as ORMPaginator;
@@ -29,6 +30,24 @@ class UserController extends AbstractActionController
      * @var User\Service\UserManager
      */
     private $userManager;
+
+    /**
+     * We override the parent class' onDispatch() method to
+     * set an alternative layout for all actions in this controller.
+     */
+    public function onDispatch(MvcEvent $e)
+    {
+        // Call the base class' onDispatch() first and grab the response
+        $response = parent::onDispatch($e);
+
+        // Set alternative layout
+        $this->layout()->setTemplate('layout/user');
+
+        // Return the response
+        return $response;
+    }
+
+
 
     /**
      * Constructor.
