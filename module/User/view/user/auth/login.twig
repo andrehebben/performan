@@ -1,28 +1,27 @@
-<div class="row">
-    <div class="col-md-offset-4 col-md-3">
-        <form class="form-signin" method="post">
-            <h2 class="form-signin-heading">Please sign in</h2>
-            {%  if (isLoginError) %}
-            <div class="alert alert-warning" role="alert">
-                Incorrect login and/or password.
-                <a href="{{  url('reset-password') }}">Forgot password?</a>
+
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+        <div>
+            <h1 class="logo-name">AH</h1>
+        </div>
+        <h3>Welcome to PERFORMAN</h3>
+        <p>The Personal Performance Information System of Andre Hebben.</p>
+        <p>Login in. To see it in action.</p>
+        <form class="form-signin" method="post" class="m-t">
+            <div class="form-group">
+                {{  formElement(form.get('email')) }}
             </div>
-            {% endif %}
-            {{  formLabel(form.get('email')) }}
-            {{  formElement(form.get('email')) }}
-
-
-            {{  formLabel(form.get('password')) }}
-            {{  formElement(form.get('password')) }}
-            <div class="checkbox">
-                <label>
-                    {{  formElement(form.get('remember_me')) }} Remember me
-                </label>
+            <div class="form-group">
+                {{  formElement(form.get('password')) }}
+            </div>
+            <div class="form-group">
+            {{  formElement(form.get('remember_me')) }} Remember me
             </div>
             {{  formElement(form.get('redirect_url')) }}
             {{  formElement(form.get('csrf')) }}
+            <button type="submit" class="btn btn-primary block full-width m-b">Sign In</button>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <a href="{{  url('reset-password') }}"><small>Forgot password?</small></a>
         </form>
     </div>
 </div>

@@ -37,6 +37,10 @@ class LoginForm extends Form
             'options' => [
                 'label' => 'Your E-mail',
             ],
+            'attributes' => [
+                'placeholder' => 'Your E-mail',
+                'class' => 'form-control'
+            ],
         ]);
 
         // Add "password" field
@@ -45,6 +49,10 @@ class LoginForm extends Form
             'name' => 'password',
             'options' => [
                 'label' => 'Password',
+            ],
+            'attributes' => [
+                'placeholder' => 'Your Password',
+                'class' => 'form-control'
             ],
         ]);
 

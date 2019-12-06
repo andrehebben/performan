@@ -1,0 +1,37 @@
+{{ doctype() }}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Andre Hebben - Personal Homepage, resume and portfolio">
+    <meta name="author" content="Andre Hebben">
+    <title>PERFORMAN | Login</title>
+    {% block meta %}{% endblock meta %}
+
+    <!-- Le styles -->
+    <link href="{{ basePath() }}/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="{{ basePath() }}/css/animate.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="{{ basePath() }}/font-awesome/css/all.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="{{ basePath() }}/font-awesome/css/brands.css" media="screen" rel="stylesheet" type="text/css">
+    {% block style %}{% endblock style %}
+    {{ headStyle() }}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom styles for this template -->
+    <link href="{{ basePath() }}/css/style.css" rel="stylesheet">
+    {{ headScript() }}
+</head>
+<body class="gray-bg">
+    {{ content|raw }}
+<script src="{{ basePath() }}/js/jquery-3.1.1.js"></script>
+<script src="{{ basePath() }}/js/popper.min.js"></script>
+<script src="{{ basePath() }}/js/bootstrap.min.js"></script>
+{{ inlineScript() }}
+</body>
+</html>
