@@ -141,6 +141,7 @@
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-dom" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-test" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-captcha" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -154,7 +155,7 @@
   <component name="PhpRuntimeConfiguration" document_root_path="public" />
   <component name="PhpUnit">
     <phpunit_settings>
-      <phpunit_by_interpreter interpreter_id="cb08adf0-2276-4b89-b4e5-98ce4872434f" load_method="CUSTOM_LOADER" configuration_file_path="/var/www/html/phpunit.xml.dist" custom_loader_path="/var/www/html/vendor/autoload.php" use_configuration_file="true" />
+      <phpunit_by_interpreter interpreter_id="cb08adf0-2276-4b89-b4e5-98ce4872434f" configuration_file_path="/var/www/html/phpunit.xml.dist" custom_loader_path="/var/www/html/vendor/autoload.php" use_configuration_file="true" />
     </phpunit_settings>
   </component>
 </project>
