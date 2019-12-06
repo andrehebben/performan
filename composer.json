@@ -15,7 +15,7 @@
         "php": "^7.0",
         "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.1.1",
-   	"zendframework/zend-mvc-form": "^1.0",
+   	    "zendframework/zend-mvc-form": "^1.0",
     	"zendframework/zend-cache": "^2.7.1",
     	"zendframework/zend-json": "^3.0",
     	"zendframework/zend-mail": "^2.10.0",
@@ -27,9 +27,10 @@
     	"zendframework/zend-serializer": "^2.8",
     	"zendframework/zendservice-twitter": "^3.0",
     	"doctrine/doctrine-orm-module": "^2.1",
-	"kokspflanze/zfc-twig": "dev-master", 
+	    "kokspflanze/zfc-twig": "dev-master",
         "rwoverdijk/assetmanager": "^1.7",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "twig/twig": "^3.0"
     },
     "autoload": {
         "psr-4": {

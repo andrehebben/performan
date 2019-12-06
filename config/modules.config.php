@@ -30,9 +30,9 @@ return [
     'Zend\Form',
     'Zend\Router',
     'Zend\Validator',
+    'AssetManager',
+    'ZfcTwig',
     'DoctrineModule',
     'DoctrineORMModule',
-    'ZfcTwig',
-    'AssetManager',
     'Application',
 ];

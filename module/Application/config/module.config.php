@@ -58,6 +58,9 @@ return [
             __DIR__ . '/../view',
         ],
     ],
+    'zfctwig' => [
+        'disable_zf_model' => false,
+    ],
     'doctrine' => [
         'driver' => [
             __NAMESPACE__ . '_driver' => [

@@ -7,6 +7,10 @@
 
 namespace Application;
 
+use Zend\EventManager\EventInterface;
+use Zend\EventManager\EventManager;
+use Zend\Mvc\MvcEvent;
+
 class Module
 {
     const VERSION = '3.0.3-dev';
@@ -15,4 +19,8 @@ class Module
     {
         return include __DIR__ . '/../config/module.config.php';
     }
+
+
+
+
 }
