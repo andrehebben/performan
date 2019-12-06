@@ -19,7 +19,7 @@
     <link href="{{ basePath() }}/font-awesome/css/all.css" media="screen" rel="stylesheet" type="text/css">
     <link href="{{ basePath() }}/font-awesome/css/brands.css" media="screen" rel="stylesheet" type="text/css">
     {% block style %}{% endblock style %}
-
+    {{ headStyle() }}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,6 +28,7 @@
     <![endif]-->
     <!-- Custom styles for this template -->
     <link href="{{ basePath() }}/css/style.css" rel="stylesheet">
+    {{ headScript() }}
 </head>
 <body id="page-top" class="landing-page">
     {{ content|raw }}
@@ -48,5 +49,6 @@
     gtag('js', new Date());
     gtag('config', 'UA-51130889-2');
 </script>
+    {{ inlineScript() }}
 </body>
 </html>
