@@ -36,6 +36,7 @@
     },
     "autoload": {
         "psr-4": {
+            "Admin\\": "module/Admin/src/",
             "Application\\": "module/Application/src/",
             "User\\": "module/User/src/"
         }
