@@ -5,7 +5,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace UserTest\Controller;
+namespace AdminTest\Controller;
 
 use Admin\Controller\AdminController;
 use Zend\Stdlib\ArrayUtils;
