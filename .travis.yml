@@ -21,6 +21,7 @@ before_install:
   - echo "extension = mysql.so" > ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 install:
+  - mv ./config/autoload/doctrine.local.php.dist ./config/autoload/doctrine.local.php
   - travis_retry composer -n --prefer-source install
   - ./vendor/bin/doctrine-module orm:schema-tool:update --force
 
