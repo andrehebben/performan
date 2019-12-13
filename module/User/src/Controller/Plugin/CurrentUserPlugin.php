@@ -38,7 +38,7 @@ class CurrentUserPlugin extends AbstractPlugin
     }
     /**
      * This method is called when you invoke this plugin in your controller: $user = $this->currentUser();
-     * @param bool $useCachedUser If true, the User entity is fetched only on the first call (and cached on subsequent calls).
+     * @param bool $useCachedUser If true, the User entity is fetched only on the first call
      * @return User|null
      */
     public function __invoke($useCachedUser = true)
