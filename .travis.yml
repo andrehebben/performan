@@ -35,4 +35,4 @@ jobs:
         - ./vendor/bin/phpcs
 
     - stage: Lint
-      script: vendor/bin/phpstan analyse --level=7 module
+      script: vendor/bin/phpstan analyse --level=1 module
