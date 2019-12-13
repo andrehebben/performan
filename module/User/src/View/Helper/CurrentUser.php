@@ -38,7 +38,7 @@ class CurrentUser extends AbstractHelper
 
     /**
      * Returns the current User or null if not logged in.
-     * @param bool $useCachedUser If true, the User entity is fetched only on the first call (and cached on subsequent calls).
+     * @param bool $useCachedUser If true, the User entity is fetched only on the first call
      * @return User|null
      */
     public function __invoke($useCachedUser = true)
