@@ -13,6 +13,7 @@ php:
 before_install:
   - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
   - echo "extension = redis.so" > ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
 
 install:
   - mv ./config/autoload/doctrine.local.php.dist ./config/autoload/doctrine.local.php
