@@ -8,8 +8,8 @@ return [
                 'driverClass' => PDOMySqlDriver::class,
                 'params' => [
                     'host'     => '127.0.0.1',
-                    'user'     => 'performan',
-                    'password' => 'performan',
+                    'user'     => 'root',
+                    'password' => '',
                     'dbname'   => 'performan',
                 ]
             ],

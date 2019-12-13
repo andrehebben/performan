@@ -1,12 +1,7 @@
 sudo: false
 language: php
-
-mysql:
-  adapter:  mysql2
-  database: performan
-  username: performan
-  password: performan
-  encoding: utf8
+services:
+  - mysql
 
 cache:
   directories:
@@ -18,7 +13,6 @@ php:
 before_install:
   - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
   - echo "extension = redis.so" > ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - echo "extension = pdo_mysql" > ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 install:
   - mv ./config/autoload/doctrine.local.php.dist ./config/autoload/doctrine.local.php
