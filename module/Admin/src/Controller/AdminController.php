@@ -9,6 +9,7 @@ namespace Admin\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Mvc\MvcEvent;
+use Zend\View\Model\ViewModel;
 
 class AdminController extends AbstractActionController
 {
@@ -29,8 +30,11 @@ class AdminController extends AbstractActionController
     }
 
 
+    /**
+     * @return ViewModel
+     */
     public function indexAction()
     {
-        return [];
+        return new ViewModel();
     }
 }

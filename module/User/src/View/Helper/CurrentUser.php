@@ -1,14 +1,13 @@
 <?php
-namespace User\Controller\Plugin;
+namespace User\View\Helper;
 
-use Zend\Mvc\Controller\Plugin\AbstractPlugin;
+use Zend\View\Helper\AbstractHelper;
 use User\Entity\User;
 
 /**
- * This controller plugin is designed to let you get the currently logged in User entity
- * inside your controller.
+ * This view helper is used for retrieving the User entity of currently logged in user.
  */
-class CurrentUserPlugin extends AbstractPlugin
+class CurrentUser extends AbstractHelper
 {
     /**
      * Entity manager.
@@ -23,7 +22,7 @@ class CurrentUserPlugin extends AbstractPlugin
     private $authService;
 
     /**
-     * Logged in user.
+     * Previously fetched User entity.
      * @var \User\Entity\User
      */
     private $user = null;
@@ -36,14 +35,15 @@ class CurrentUserPlugin extends AbstractPlugin
         $this->entityManager = $entityManager;
         $this->authService = $authService;
     }
+
     /**
-     * This method is called when you invoke this plugin in your controller: $user = $this->currentUser();
-     * @param bool $useCachedUser If true, the User entity is fetched only on the first call
+     * Returns the current User or null if not logged in.
+     * @param bool $useCachedUser If true, the User entity is fetched only on the first call (and cached on subsequent calls).
      * @return User|null
      */
     public function __invoke($useCachedUser = true)
     {
-        // If current user is already fetched, return it.
+        // Check if User is already fetched previously.
         if ($useCachedUser && $this->user !== null) {
             return $this->user;
         }
@@ -51,15 +51,16 @@ class CurrentUserPlugin extends AbstractPlugin
         // Check if user is logged in.
         if ($this->authService->hasIdentity()) {
             // Fetch User entity from database.
-            $this->user = $this->entityManager->getRepository(User::class)
-                ->findOneByEmail($this->authService->getIdentity());
+            $this->user = $this->entityManager->getRepository(User::class)->findOneBy([
+                'email' => $this->authService->getIdentity()
+            ]);
             if ($this->user == null) {
                 // Oops.. the identity presents in session, but there is no such user in database.
                 // We throw an exception, because this is a possible security problem.
-                throw new \Exception('Not found user with such email');
+                throw new \Exception('Not found user with such ID');
             }
 
-            // Return found User.
+            // Return the User entity we found.
             return $this->user;
         }
 

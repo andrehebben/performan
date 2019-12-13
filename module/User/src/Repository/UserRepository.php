@@ -2,6 +2,7 @@
 namespace User\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
 use User\Entity\User;
 
 /**

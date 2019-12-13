@@ -16,17 +16,17 @@ class AuthController extends AbstractActionController
 {
     /**
      * Entity manager.
-     * @var Doctrine\ORM\EntityManager
+     * @var \Doctrine\ORM\EntityManager
      */
     private $entityManager;
     /**
      * Auth manager.
-     * @var User\Service\AuthManager
+     * @var \User\Service\AuthManager
      */
     private $authManager;
     /**
      * User manager.
-     * @var User\Service\UserManager
+     * @var \User\Service\UserManager
      */
     private $userManager;
 

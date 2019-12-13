@@ -18,7 +18,7 @@ class UserManager
 {
     /**
      * Doctrine entity manager.
-     * @var Doctrine\ORM\EntityManager
+     * @var \Doctrine\ORM\EntityManager
      */
     private $entityManager;
 
@@ -159,7 +159,7 @@ class UserManager
         }
 
         // Generate a token.
-        $token = Rand::getString(32, '0123456789abcdefghijklmnopqrstuvwxyz', true);
+        $token = Rand::getString(32, '0123456789abcdefghijklmnopqrstuvwxyz');
 
         // Encrypt the token before storing it in DB.
         $bcrypt = new Bcrypt();

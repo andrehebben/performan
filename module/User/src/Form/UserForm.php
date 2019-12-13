@@ -21,13 +21,13 @@ class UserForm extends Form
 
     /**
      * Entity manager.
-     * @var Doctrine\ORM\EntityManager
+     * @var \Doctrine\ORM\EntityManager
      */
     private $entityManager = null;
 
     /**
      * Current user.
-     * @var User\Entity\User
+     * @var \User\Entity\User
      */
     private $user = null;
 
