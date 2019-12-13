@@ -43,7 +43,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
+            "AdminTest\\": "module/Admin/test/",
+            "ApplicationTest\\": "module/Application/test/",
+            "UserTest\\": "module/User/test/"
         }
     },
     "extra": [],
