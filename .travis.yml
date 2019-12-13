@@ -1,6 +1,13 @@
 sudo: false
 language: php
 
+mysql:
+  adapter:  mysql2
+  database: performan
+  username: performan
+  password: performan
+  encoding: utf8
+
 cache:
   directories:
     - $HOME/.composer/cache
@@ -11,10 +18,11 @@ php:
 before_install:
   - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
   - echo "extension = redis.so" > ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-
+  - echo "extension = mysql.so" > ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 install:
   - travis_retry composer -n --prefer-source install
+  - ./vendor/bin/doctrine-module orm:schema-tool:update --force
 
 script: ./vendor/bin/phpunit
 
