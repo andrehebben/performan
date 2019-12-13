@@ -8,7 +8,9 @@
     backupGlobals="false">
     <testsuites>
         <testsuite name="Performan Test Suite">
+            <directory>./module/Admin/test</directory>
             <directory>./module/Application/test</directory>
+            <directory>./module/User/test</directory>
         </testsuite>
     </testsuites>
     <filter>
