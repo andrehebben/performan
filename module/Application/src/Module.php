@@ -10,7 +10,6 @@ namespace Application;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Session\SessionManager;
 
-
 class Module
 {
     const VERSION = '3.0.3-dev';
