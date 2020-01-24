@@ -1,7 +1,7 @@
 <?php
 namespace User\Validator;
 
-use Zend\Validator\AbstractValidator;
+use Laminas\Validator\AbstractValidator;
 use User\Entity\User;
 
 /**

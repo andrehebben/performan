@@ -7,10 +7,9 @@
 
 namespace Application;
 
-use Zend\EventManager\EventInterface;
-use Zend\EventManager\EventManager;
-use Zend\Mvc\MvcEvent;
-use Zend\Session\SessionManager;
+use Laminas\Mvc\MvcEvent;
+use Laminas\Session\SessionManager;
+
 
 class Module
 {

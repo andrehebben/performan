@@ -1,7 +1,7 @@
 <?php
 namespace Admin;
 
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 return [
     'controllers' => [

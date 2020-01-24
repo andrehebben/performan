@@ -13,26 +13,27 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.0",
-        "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
-        "zendframework/zend-mvc": "^3.1.1",
-   	    "zendframework/zend-mvc-form": "^1.0",
-    	"zendframework/zend-cache": "^2.7.1",
-    	"zendframework/zend-json": "^3.0",
-    	"zendframework/zend-mail": "^2.10.0",
-    	"zendframework/zend-mvc-console": "^1.1.10",
-    	"zendframework/zend-mvc-i18n": "^1.0",
-    	"zendframework/zend-mvc-plugins": "^1.0",
-    	"zendframework/zend-navigation": "^2.8.1",
-    	"zendframework/zend-session": "^2.9",
-    	"zendframework/zend-serializer": "^2.8",
-    	"zendframework/zendservice-twitter": "^3.0",
-    	"doctrine/doctrine-orm-module": "^2.1",
-	    "kokspflanze/zfc-twig": "dev-master",
+        "laminas/laminas-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
+        "laminas/laminas-mvc": "^3.1.1",
+        "laminas/laminas-mvc-form": "^1.0",
+        "laminas/laminas-cache": "^2.7.1",
+        "laminas/laminas-json": "^3.0",
+        "laminas/laminas-mail": "^2.10.0",
+        "laminas/laminas-mvc-console": "^1.1.10",
+        "laminas/laminas-mvc-i18n": "^1.0",
+        "laminas/laminas-mvc-plugins": "^1.0",
+        "laminas/laminas-navigation": "^2.8.1",
+        "laminas/laminas-serializer": "^2.8",
+        "laminas/laminas-twitter": "^3.0",
+        "doctrine/doctrine-orm-module": "^2.1",
+        "kokspflanze/zfc-twig": "dev-laminas",
         "rwoverdijk/assetmanager": "^1.7",
         "squizlabs/php_codesniffer": "*",
         "twig/twig": "^3.0",
-        "zendframework/zend-authentication": "^2.7",
-        "zendframework/zend-captcha": "^2.9"
+        "laminas/laminas-authentication": "^2.7",
+        "laminas/laminas-captcha": "^2.9",
+        "laminas/laminas-dependency-plugin": "^1.0",
+        "laminas/laminas-session": "^2.9"
     },
     "autoload": {
         "psr-4": {
@@ -52,9 +53,9 @@
     "scripts": {
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
-        "development-disable": "zf-development-mode disable",
-        "development-enable": "zf-development-mode enable",
-        "development-status": "zf-development-mode status",
+        "development-disable": "laminas-development-mode disable",
+        "development-enable": "laminas-development-mode enable",
+        "development-status": "laminas-development-mode status",
         "post-create-project-cmd": [
             "@development-enable"
         ],
@@ -62,7 +63,7 @@
         "test": "phpunit"
     },
     "require-dev": {
-        "zendframework/zend-test": "^3.3",
+        "laminas/laminas-test": "^3.3",
         "phpstan/phpstan": "^0.11.16",
         "phpmd/phpmd": "^2.7",
         "phploc/phploc": "^5.0"
