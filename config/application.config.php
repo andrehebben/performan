@@ -32,7 +32,7 @@ return [
         // subsequent requests.
         'config_cache_enabled' => true,
 
-        // The key used to create the configuration cache file name.
+        // The key used to create the configuration cache file name.0
         'config_cache_key' => 'application.config.cache',
 
         // Whether or not to enable a module class map cache.

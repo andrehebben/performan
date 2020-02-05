@@ -21,14 +21,11 @@ class AdminController extends AbstractActionController
     {
         // Call the base class' onDispatch() first and grab the response
         $response = parent::onDispatch($e);
-
         // Set alternative layout
         $this->layout()->setTemplate('layout/admin');
-
         // Return the response
         return $response;
     }
-
 
     /**
      * @return ViewModel
