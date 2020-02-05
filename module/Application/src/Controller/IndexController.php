@@ -14,7 +14,6 @@ use Laminas\View\Model\ViewModel;
 final class IndexController extends AbstractActionController
 {
 
-
     /**
      * We override the parent class' onDispatch() method to
      * set an alternative layout for all actions in this controller.
@@ -28,7 +27,9 @@ final class IndexController extends AbstractActionController
         return $response;
     }
 
-
+    /**
+     * @return ViewModel
+     */
     public function indexAction()
     {
         $view = new ViewModel();

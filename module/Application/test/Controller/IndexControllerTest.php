@@ -13,6 +13,7 @@ use Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 class IndexControllerTest extends AbstractHttpControllerTestCase
 {
+
     public function setUp(): void
     {
         // The module configuration should still be applicable for tests.
@@ -29,6 +30,9 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         parent::setUp();
     }
 
+    /**
+     * @throws \Exception
+     */
     public function testIndexActionCanBeAccessed()
     {
         $this->dispatch('/', 'GET');
@@ -39,12 +43,18 @@ class IndexControllerTest extends AbstractHttpControllerTestCase
         $this->assertMatchedRouteName('home');
     }
 
+    /**
+     * @throws \Exception
+     */
     public function testIndexActionViewModelTemplateRenderedWithinLayout()
     {
         $this->dispatch('/', 'GET');
         $this->assertQuery('.container');
     }
 
+    /**
+     * @throws \Exception
+     */
     public function testInvalidRouteDoesNotCrash()
     {
         $this->dispatch('/invalid/route', 'GET');
