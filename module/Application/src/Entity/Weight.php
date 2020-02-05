@@ -22,6 +22,10 @@ final class Weight
      */
     protected $dateCreated;
 
+    /**
+     * @ORM\Column(type="decimal", precision=3, scale=2,  name="weight")
+     */
+    protected $weight;
 
     // Returns ID of this post.
     public function getId()
