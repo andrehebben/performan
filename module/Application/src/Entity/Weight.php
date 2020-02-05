@@ -18,7 +18,7 @@ final class Weight
     protected $id;
 
     /**
-     * @ORM\Column(name="date_created")
+     * @ORM\Column(type="datetime",name="date_created")
      */
     protected $dateCreated;
 
