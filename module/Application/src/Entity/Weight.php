@@ -66,8 +66,4 @@ final class Weight
     {
         $this->weight = $weight;
     }
-
-
-
-
 }
