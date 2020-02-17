@@ -2,21 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Andre Hebben - Personal Homepage, resume and portfolio">
+    <meta name="description" content="Andre Hebben - Professional problem solver">
     <meta name="author" content="Andre Hebben">
-    <title>{% block title %}Andre Hebben - Web Developer{% endblock title %}</title>
+    <title>{% block title %}Andre Hebben - Professional problem solver{% endblock title %}</title>
     <!-- Bootstrap core CSS -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Le styles -->
     <link href="{{ basePath() }}/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
     <link href="{{ basePath() }}/css/animate.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="{{ basePath() }}/font-awesome/css/all.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="{{ basePath() }}/font-awesome/css/brands.css" media="screen" rel="stylesheet" type="text/css">
     {% block style %}{% endblock style %}
     {{ headStyle() }}
 
@@ -25,21 +20,11 @@
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- Custom styles for this template -->
-    <link href="{{ basePath() }}/css/style.css" rel="stylesheet">
     {{ headScript() }}
 </head>
 <body id="page-top" class="landing-page">
     {{ content|raw }}
 {% block inline %}{% endblock inline %}
-
-<script src="{{ basePath() }}/js/jquery-2.1.1.js"></script>
-<script src="{{ basePath() }}/js/pace.min.js"></script>
-<script src="{{ basePath() }}/js/bootstrap.min.js"></script>
-<script src="{{ basePath() }}/js/classie.js"></script>
-<script src="{{ basePath() }}/js/cbpAnimatedHeader.js"></script>
-<script src="{{ basePath() }}/js/wow.min.js"></script>
-<script src="{{ basePath() }}/js/local.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51130889-2"></script>
 <script>
